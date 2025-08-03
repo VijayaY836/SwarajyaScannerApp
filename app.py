@@ -215,7 +215,7 @@ if page == "Homepage":
     with cols[1]:
         st.image(
             "Image.png",       # <-- Replace with your image path or URL
-            use_column_width=True,
+            use_container_width=True,
             caption="Swarajya Scanner"
         )
 
@@ -253,7 +253,7 @@ elif page == "Document Scan":
         st.write("Uploaded File Details:", file_details)
         if uploaded_file.type in ["image/png", "image/jpg", "image/jpeg"]:
             img = Image.open(uploaded_file)
-            st.image(img, caption="Uploaded Image", use_column_width=True)
+            st.image(img, caption="Uploaded Image", use_container_width=True)
         st.success("✅ File uploaded successfully. Starting scan...")
         with st.spinner("Scanning..."):
             time.sleep(2)
